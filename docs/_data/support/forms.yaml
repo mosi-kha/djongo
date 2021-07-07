@@ -1,0 +1,100 @@
+# contact form is not used
+contact:
+  subject: support-page
+  next: "/support/request-success"
+  classes:
+    - form--splash
+  fields:
+    - type: select
+      label: "Subject:"
+      name: Subject
+      options:
+        - Commercial License
+        - Cancel Subscription
+
+    - type: input
+      label: "Name or Organization:"
+      attr:
+        type: text
+        name: Name
+
+    - type: input
+      label: "Email:"
+      attr:
+        type: email
+        name: Email
+        placeholder: "name@org.com"
+        required: ''
+
+    - type: input
+      attr:
+        type: submit
+        value: Send
+        class: "btn btn--primary btn--large"
+
+enterprise:
+  subject: Enterprise
+  next: "/support/request-success"
+  classes:
+    - fx-form
+  fields:
+    - type: input
+      label: "Full Name:"
+      attr:
+        type: text
+        name: Name
+        required: ''
+
+    - type: input
+      label: "Organization:"
+      attr:
+        type: text
+        name: Organization
+        required: ''
+
+    - type: input
+      label: "Email:"
+      attr:
+        type: email
+        name: Email
+        placeholder: "name@org.com"
+        required: ''
+
+    - type: input
+      attr:
+        type: submit
+        value: Enquire
+        class: "btn btn--primary btn--large"
+
+discuss:
+  subject: "Message"
+  next: "/support/request-success"
+  classes:
+    - fx-form
+  fields:
+    - type: input
+      label: "Full Name:"
+      attr:
+        type: text
+        name: Name
+        required: ''
+
+    - type: input
+      label: "Email:"
+      attr:
+        type: email
+        name: Email
+        placeholder: "name@org.com"
+        required: ''
+
+    - type: textarea
+      label: "Message:"
+      name: Message
+      required: true
+
+    - type: input
+      attr:
+        type: submit
+        value: Send
+        class: "btn btn--primary btn--large"
+
