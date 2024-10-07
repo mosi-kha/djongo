@@ -16,9 +16,11 @@ def _get_subcollections(collection):
     """
     Returns all sub-collections of `collection`.
     """
-    # XXX: Use the MongoDB API for this once it exists.
-    for name in collection.database.collection_names():
+    # Get the list of all collections in the database
+    for name in collection.database.list_collection_names():
+        # Extract the collection name part before the last dot
         cleaned = name[:name.rfind('.')]
+        # Check if it is a sub-collection (i.e., starts with the collection's name)
         if cleaned != collection.name and cleaned.startswith(collection.name):
             yield cleaned
 
